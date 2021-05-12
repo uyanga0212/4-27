@@ -11,7 +11,7 @@
     <title>Register</title>
   </head>
   <body>
-    <?php //include 'registration.php'; ?>
+    <?php include 'registration.php'; ?>
     <?php include 'navbar.php';?>
 
     <div class="container">
@@ -24,6 +24,15 @@
                 break;
                 case 'database':
                 $aldaa = 'Database aldaa!';
+                break;
+                case 'username':
+                $aldaa = 'Username already taken!';
+                break;
+                case 'email':
+                $aldaa = 'Email already taken!';
+                break;
+                case 'unknown':
+                $aldaa = 'Unknown error! Contact us for more information. ';
                 break;
                 default:
                 $aldaa = 'Aldaa!';
