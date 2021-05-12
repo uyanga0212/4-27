@@ -1,4 +1,21 @@
 <?php
+function hoosonbish($field){
+  if($field != ""){
+    return true;
+  } return false;
+}
+if(isset($_POST['email'])) {
+  foreach($_POST as $index => $data){
+    if(hoosonbish($data) == false){
+      die('hooson baina' . $index);
+    }
+  }
+  if($_POST['password'] != $_POST['password_confirmation']){
+    header('Location: /register.php?error=confirmation');
+  }
+  $username = $_POST['username'];
+  $username = $_POST['email'];
+  
 $serverip = "162.251.80.117";
 $username = "apprenti_uyanga";
 $password = "bondooloi1208/";
@@ -9,9 +26,10 @@ $conn = new mysqli($serverip, $username, $password, $dbname);
 
 
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+  header("Location: /register.php?error=database");
 }
-die('connected holbogdson');
+//SELECT * FROM `users` WHERE `email` = `little_harry0212@yahoo.com` OR `username` = `uyanga`;
+  die('connected holbogdson');
 
 // $sql = "SELECT * FROM `users`";
 // $hariu = $conn->query($sql);
@@ -26,8 +44,7 @@ die('connected holbogdson');
 //   echo "0 results";
 // }
 // $conn->close();
-
-// if(isset($_POST['email'])) {
-//     print_r($_POST);
-// }
+} else{
+  header("location: /registrer.php?");
+}
 // ?>
