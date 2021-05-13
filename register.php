@@ -8,10 +8,10 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
-    <title>Register</title>
+    <title>Home!</title>
   </head>
   <body>
-    <?php include 'registration.php'; ?>
+    <?php //include 'registration.php'; ?>
     <?php include 'navbar.php';?>
 
     <div class="container">
@@ -34,7 +34,7 @@
                 case 'unknown':
                 $aldaa = 'Unknown error! Contact us for more information. ';
                 break;
-                default:
+                default: 
                 $aldaa = 'Aldaa!';
             }
 
@@ -53,11 +53,11 @@
         ?>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Name</label>
-            <input value="" type="text" required name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input value="ApprenticeMGL" type="text" required name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Username</label>
-            <input value="" type="text" required name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input value="uyanga" type="text" required name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -72,7 +72,7 @@
             <input type="password" name="password_confirmation" required class="form-control" id="exampleInputPassword1">
         </div>  
         <div class="mb-3 form-check">
-            <input required type="checkbox" class="form-check-input" id="exampleCheck1">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Terms and Agreements</label>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
